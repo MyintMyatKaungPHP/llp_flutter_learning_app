@@ -11,9 +11,9 @@ class ImageDemo extends StatelessWidget {
         children: [
           Text('Image from network'),
           Image.network(
-              'https://cdn.iconscout.com/icon/free/png-512/free-flutter-2038877-1720090.png?f=webp&w=256',
-              loadingBuilder: (context,child,prgress){
-                return prgress == null ? child : CircularProgressIndicator();
+              'https://img.freepik.com/free-vector/watercolor-chinese-style-background_52683-96103.jpg?w=1380&t=st=1719136295~exp=1719136895~hmac=74ea22201e6a8bf716809b795662b803c2d1169a43790d88127bb8541502f7c2',
+              loadingBuilder: (context,child,progress){
+                return progress == null ? child : CircularProgressIndicator();
               },
               errorBuilder: (context,_,event){
                 return Icon(Icons.error);

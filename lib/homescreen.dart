@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
+import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/icon_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/image_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/text_demo.dart';
@@ -19,6 +20,9 @@ class HomeScreen extends StatelessWidget {
           color: Colors.white,
           surfaceTintColor: Colors.green,
           child: ExpansionTile(
+            shape: RoundedRectangleBorder(
+              side: BorderSide.none,
+            ),
             leading: Icon(Icons.star_border),
             title: Text(title),
             children: subtitle,
@@ -47,6 +51,7 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('TextFeild', TextfieldDemo(), 'widgets/textfield_demo.dart'),
       buildSubtitle('TextFormFeild', TextformfieldDemo(), 'widgets/textformfield_demo.dart'),
       buildSubtitle('Image', ImageDemo(), 'widgets/image_demo.dart'),
+      buildSubtitle('Dropdown & Menu', DropdownDemo(), 'widgets/dropdown_demo.dart'),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
