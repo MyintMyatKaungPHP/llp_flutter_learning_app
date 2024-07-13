@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
+import 'package:llp_flutter_learning_app/widgets/global_key_example.dart';
 import 'package:llp_flutter_learning_app/widgets/icon_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/image_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/key_example.dart';
@@ -56,6 +57,7 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('Dropdown & Menu', DropdownDemo(), 'widgets/dropdown_demo.dart'),
       buildSubtitle('Other Stateful Widgets', OtherStatefulWidgets(), 'widgets/other_stateful_widgets_demo.dart'),
       buildSubtitle('Flutter Keys', KeyExample(), 'widgets/key_example.dart'),
+      buildSubtitle('Flutter Global Keys', GlobalKeyExample(), 'widgets/global_key_example.dart'),
     ];
     return Scaffold(
       backgroundColor: Colors.white,
