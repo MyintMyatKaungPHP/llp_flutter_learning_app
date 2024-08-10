@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
+import 'package:llp_flutter_learning_app/layouts/row_column_demo.dart';
+import 'package:llp_flutter_learning_app/layouts/wrap_demo.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
@@ -59,17 +62,66 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('Flutter Keys', KeyExample(), 'widgets/key_example.dart'),
       buildSubtitle('Flutter Global Keys', GlobalKeyExample(), 'widgets/global_key_example.dart'),
     ];
+
+    final List<Widget> layouts = [
+      buildSubtitle('Container', ContainerDemo(), 'layouts/container_demo.dart'),
+      buildSubtitle('Row & Column', RowColumnDemo(), 'layouts/row_column_demo.dart'),
+      buildSubtitle('Wrap', WrapDemo(), 'layouts/wrap_demo.dart'),
+      buildSubtitle('FactionallySizedBox', Placeholder(), ''),
+      buildSubtitle('Expanded', Placeholder(), ''),
+      buildSubtitle('Stack', Placeholder(), ''),
+    ];
+
+    final List<Widget> lists = [
+      buildSubtitle('ListTile', const Placeholder(),''),
+      buildSubtitle('ListView.builder()', const Placeholder(),''),
+      buildSubtitle('GridView', const Placeholder(),''),
+      buildSubtitle('ExpansionTile', const Placeholder(),''),
+      buildSubtitle('Swipe To Dismiss', const Placeholder(),''),
+      buildSubtitle('ReorderableListView', const Placeholder(),''),
+      buildSubtitle('SlidableListTile', const Placeholder(),''),
+      buildSubtitle('Data Table', const Placeholder(),''),
+    ];
+
+    final List<Widget> appbars = [
+      buildSubtitle('Basic AppBar', const Placeholder(),''),
+      buildSubtitle('BottomAppBar & FAB', const Placeholder(),''),
+      buildSubtitle('Sliver AppBar', const Placeholder(),''),
+      buildSubtitle('Backdrop', const Placeholder(),''),
+      buildSubtitle('ConvexAppBar', const Placeholder(),''),
+      buildSubtitle('HidableBottomNavBar', const Placeholder(),''),
+      buildSubtitle('SearchBar', const Placeholder(),''),
+    ];
+    
+    final List<Widget> navigations = [
+      buildSubtitle('Tabs', Placeholder(), ''),
+      buildSubtitle('Dialogs', Placeholder(), ''),
+      buildSubtitle('Drawers', Placeholder(), ''),
+      buildSubtitle('BottomSheet', Placeholder(), ''),
+      buildSubtitle('BottomTabBar', Placeholder(), ''),
+      buildSubtitle('BottomNavBar', Placeholder(), ''),
+      buildSubtitle('Page Selector', Placeholder(), ''),
+      buildSubtitle('DraggableScrollableSheet', Placeholder(), ''),
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
         appBar: AppBar(
           title: const Text('Flutter Learning Catalog'),
         ),
-        body: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Column(
-            children: [
-              buildTitle('Widgets', widgets),
-            ],
+        body: SingleChildScrollView(
+          scrollDirection: Axis.vertical,
+          child: Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Column(
+              children: [
+                buildTitle('Widgets', widgets),
+                buildTitle('Layouts', layouts),
+                buildTitle('Lists', lists),
+                buildTitle('Appbars', appbars),
+                buildTitle('Navigations', navigations),
+              ],
+            ),
           ),
         ));
   }
