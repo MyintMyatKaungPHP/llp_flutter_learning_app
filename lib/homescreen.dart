@@ -1,7 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
+import 'package:llp_flutter_learning_app/layouts/expanded_demo.dart';
+import 'package:llp_flutter_learning_app/layouts/listview_builder_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/row_column_demo.dart';
+import 'package:llp_flutter_learning_app/layouts/stack_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/wrap_demo.dart';
+import 'package:llp_flutter_learning_app/lists/list_tile_demo.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
@@ -14,6 +18,8 @@ import 'package:llp_flutter_learning_app/widgets/text_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/textfield_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/textformfield_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/typography_demo.dart';
+
+import 'layouts/fractionally_sizebox_demo.dart';
 
 class HomeScreen extends StatelessWidget {
   HomeScreen({super.key});
@@ -67,14 +73,14 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('Container', ContainerDemo(), 'layouts/container_demo.dart'),
       buildSubtitle('Row & Column', RowColumnDemo(), 'layouts/row_column_demo.dart'),
       buildSubtitle('Wrap', WrapDemo(), 'layouts/wrap_demo.dart'),
-      buildSubtitle('FactionallySizedBox', Placeholder(), ''),
-      buildSubtitle('Expanded', Placeholder(), ''),
-      buildSubtitle('Stack', Placeholder(), ''),
+      buildSubtitle('FractionallySizedBox', FractionallySizeboxDemo(), 'layouts/fractionally_sizebox.dart'),
+      buildSubtitle('Expanded', ExpandedDemo(), 'layouts/expended_demo.dart'),
+      buildSubtitle('Stack', StackDemo(), 'layouts/stack_deom.dart'),
     ];
 
     final List<Widget> lists = [
-      buildSubtitle('ListTile', const Placeholder(),''),
-      buildSubtitle('ListView.builder()', const Placeholder(),''),
+      buildSubtitle('ListTile', ListTileDemo(),'lists/list_tile_demo.dart'),
+      buildSubtitle('ListView.builder()', ListviewBuilderDemo(),'lists/listview_builder_demo.dart'),
       buildSubtitle('GridView', const Placeholder(),''),
       buildSubtitle('ExpansionTile', const Placeholder(),''),
       buildSubtitle('Swipe To Dismiss', const Placeholder(),''),
@@ -104,6 +110,18 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('DraggableScrollableSheet', Placeholder(), ''),
     ];
 
+    final List<Widget> async = [
+      buildSubtitle('FutureBuilder', Placeholder(), ''),
+      buildSubtitle('StreamBuilder', Placeholder(), ''),
+    ];
+
+    final List<Widget> animations = [
+      buildSubtitle('Hero', Placeholder(), ''),
+      buildSubtitle('Opacity', Placeholder(), ''),
+      buildSubtitle('AnimatedContainer', Placeholder(), ''),
+      buildSubtitle('AnimationPackage', Placeholder(), ''),
+    ];
+
     return Scaffold(
       backgroundColor: Colors.white,
         appBar: AppBar(
@@ -120,6 +138,8 @@ class HomeScreen extends StatelessWidget {
                 buildTitle('Lists', lists),
                 buildTitle('Appbars', appbars),
                 buildTitle('Navigations', navigations),
+                buildTitle('Async', async),
+                buildTitle('Animation', animations),
               ],
             ),
           ),
