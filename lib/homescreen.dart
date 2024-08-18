@@ -1,11 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:llp_flutter_learning_app/appbars/bottom_appbar_demo.dart';
+import 'package:llp_flutter_learning_app/appbars/sliver_appbar_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/expanded_demo.dart';
-import 'package:llp_flutter_learning_app/layouts/listview_builder_demo.dart';
+import 'package:llp_flutter_learning_app/lists/datatable_demo.dart';
+import 'package:llp_flutter_learning_app/lists/gridview_builder_demo.dart';
+import 'package:llp_flutter_learning_app/lists/listview_builder_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/row_column_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/stack_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/wrap_demo.dart';
 import 'package:llp_flutter_learning_app/lists/list_tile_demo.dart';
+import 'package:llp_flutter_learning_app/lists/reorderable_listview_demo.dart';
+import 'package:llp_flutter_learning_app/lists/slidable_listtile_demo.dart';
+import 'package:llp_flutter_learning_app/lists/swipe_to_dismiss_demo.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
@@ -81,18 +88,16 @@ class HomeScreen extends StatelessWidget {
     final List<Widget> lists = [
       buildSubtitle('ListTile', ListTileDemo(),'lists/list_tile_demo.dart'),
       buildSubtitle('ListView.builder()', ListviewBuilderDemo(),'lists/listview_builder_demo.dart'),
-      buildSubtitle('GridView', const Placeholder(),''),
-      buildSubtitle('ExpansionTile', const Placeholder(),''),
-      buildSubtitle('Swipe To Dismiss', const Placeholder(),''),
-      buildSubtitle('ReorderableListView', const Placeholder(),''),
-      buildSubtitle('SlidableListTile', const Placeholder(),''),
-      buildSubtitle('Data Table', const Placeholder(),''),
+      buildSubtitle('Gridview', GridviewBuilderDemo(), 'lists/gridview_builder_demo.dart'),
+      buildSubtitle('Swipe To Dismiss', SwipeToDismissDemo(),'lists/swipe_to_dismiss_demo.dart'),
+      buildSubtitle('ReorderableListView', ReorderableListviewDemo(),'lists/reorderable_listview_demo.dart' ),
+      buildSubtitle('SlidableListTile', SlidableListtileDemo(),'lists/slidable_listtile_demo.dart'),
+      buildSubtitle('Data Table', DatatableDemo(),'lists/datatable_demo.dart'),
     ];
 
     final List<Widget> appbars = [
-      buildSubtitle('Basic AppBar', const Placeholder(),''),
-      buildSubtitle('BottomAppBar & FAB', const Placeholder(),''),
-      buildSubtitle('Sliver AppBar', const Placeholder(),''),
+      buildSubtitle('BottomAppBar', BottomAppbarDemo(),'appbars/bottom_appbar_demo.dart'),
+      buildSubtitle('Sliver AppBar', SliverAppbarDemo(),'appbars/sliver_appbar_demo.dart'),
       buildSubtitle('Backdrop', const Placeholder(),''),
       buildSubtitle('ConvexAppBar', const Placeholder(),''),
       buildSubtitle('HidableBottomNavBar', const Placeholder(),''),
