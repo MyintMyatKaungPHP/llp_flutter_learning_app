@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:llp_flutter_learning_app/appbars/backdrop_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/bottom_appbar_demo.dart';
+import 'package:llp_flutter_learning_app/appbars/convex_bottom_bar_demo.dart';
+import 'package:llp_flutter_learning_app/appbars/hidable_bottom_appbar_demo.dart';
+import 'package:llp_flutter_learning_app/appbars/searchbar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/sliver_appbar_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/expanded_demo.dart';
@@ -98,10 +102,10 @@ class HomeScreen extends StatelessWidget {
     final List<Widget> appbars = [
       buildSubtitle('BottomAppBar', BottomAppbarDemo(),'appbars/bottom_appbar_demo.dart'),
       buildSubtitle('Sliver AppBar', SliverAppbarDemo(),'appbars/sliver_appbar_demo.dart'),
-      buildSubtitle('Backdrop', const Placeholder(),''),
-      buildSubtitle('ConvexAppBar', const Placeholder(),''),
-      buildSubtitle('HidableBottomNavBar', const Placeholder(),''),
-      buildSubtitle('SearchBar', const Placeholder(),''),
+      buildSubtitle('Backdrop', BackdropDemo(),'appbars/backdrop_demo.dart'),
+      buildSubtitle('Convex Bottom Bar', ConvexBottomBarDemo(),'appbars/convex_bottom_bar_demo.dart'),
+      buildSubtitle('HidableBottomNavBar', HidableBottomAppbarDemo(),'appbar/hidable_bottom_appbar_demo.dart'),
+      buildSubtitle('SearchBar', SearchbarDemo(),'appbar/searchbar_demo.dart'),
     ];
     
     final List<Widget> navigations = [
