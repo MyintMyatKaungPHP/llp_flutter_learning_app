@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:badges/badges.dart' as bd;
 
 class User {
   String name, message, image, time;

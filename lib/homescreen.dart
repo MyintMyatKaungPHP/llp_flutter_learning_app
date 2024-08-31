@@ -17,6 +17,11 @@ import 'package:llp_flutter_learning_app/lists/list_tile_demo.dart';
 import 'package:llp_flutter_learning_app/lists/reorderable_listview_demo.dart';
 import 'package:llp_flutter_learning_app/lists/slidable_listtile_demo.dart';
 import 'package:llp_flutter_learning_app/lists/swipe_to_dismiss_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/bottom_sheet_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/bottom_tabbar_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/dialogs_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/drawer_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/tabs_demo.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
@@ -109,11 +114,11 @@ class HomeScreen extends StatelessWidget {
     ];
     
     final List<Widget> navigations = [
-      buildSubtitle('Tabs', Placeholder(), ''),
-      buildSubtitle('Dialogs', Placeholder(), ''),
-      buildSubtitle('Drawers', Placeholder(), ''),
-      buildSubtitle('BottomSheet', Placeholder(), ''),
-      buildSubtitle('BottomTabBar', Placeholder(), ''),
+      buildSubtitle('Tabs', TabsDemo(), 'navigations/tabs_demo.dart'),
+      buildSubtitle('Dialogs', DialogsDemo(), 'navigations/dialogs_demo.dart'),
+      buildSubtitle('Drawers', DrawerDemo(), 'navigations/drawer_demo.dart'),
+      buildSubtitle('BottomSheet', BottomSheetDemo(), 'navigations/drawer_demo.dart'),
+      buildSubtitle('BottomTabBar', BottomTabbarDemo(), 'navigations/bottom_tabbar_demo.dart'),
       buildSubtitle('BottomNavBar', Placeholder(), ''),
       buildSubtitle('Page Selector', Placeholder(), ''),
       buildSubtitle('DraggableScrollableSheet', Placeholder(), ''),

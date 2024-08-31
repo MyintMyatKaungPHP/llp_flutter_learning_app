@@ -7,8 +7,8 @@ Widget buildPhoneCard(Phone p){
       leading: CircleAvatar(
         child: Text('${p.quantity}'),
       ),
-      title: Text(p.brand),
-      subtitle: Text(p.model),
+      title: Text(p.model),
+      subtitle: Text(p.brand),
       trailing: Text('\$ ${p.price}'),
     ),
   );
@@ -31,7 +31,12 @@ class _SearchbarDemoState extends State<SearchbarDemo> {
         title: Text('M Mobile'),
         actions: [
           IconButton(
-              onPressed: (){}, 
+              onPressed: (){
+                showSearch(
+                    context: context,
+                    delegate: MySearchDeligate(phones: phones)
+                );
+              },
               icon: Icon(Icons.search)
           )
         ],
@@ -44,4 +49,63 @@ class _SearchbarDemoState extends State<SearchbarDemo> {
       ),
     );
   }
+}
+
+class MySearchDeligate extends SearchDelegate{
+  final List<Phone> phones;
+  MySearchDeligate({required this.phones});
+
+  @override
+  List<Widget>? buildActions(BuildContext context) {
+    // TODO: implement buildActions
+    return [
+      IconButton(
+        tooltip: 'Voice Search',
+          onPressed: (){},
+          icon: Icon(Icons.mic),
+      ),
+      if(query != '')
+      IconButton(
+        tooltip: 'Clear',
+          onPressed: (){
+            query = '';
+          },
+          icon: Icon(Icons.clear)
+      )
+    ];
+  }
+
+  @override
+  Widget? buildLeading(BuildContext context) {
+    // TODO: implement buildLeading
+    return IconButton(
+        onPressed: (){
+          Navigator.of(context).pop();
+        },
+        icon: Icon(Icons.arrow_back)
+    );
+  }
+
+  @override
+  Widget buildResults(BuildContext context) {
+    final List<Phone> filterResults = query.isEmpty ? phones : phones.where((p)=>p.model.contains(query) || p.brand.contains(query)).toList();
+    return ListView.separated(
+      padding: EdgeInsets.all(10),
+      itemBuilder: (context,index) => buildPhoneCard(filterResults[index]),
+      separatorBuilder: (context,index) => SizedBox(height: 5,),
+      itemCount: filterResults.length,
+    );
+  }
+
+  @override
+  Widget buildSuggestions(BuildContext context) {
+    final List<Phone> filterResults = query.isEmpty ? phones : phones.where((p)=>p.model.contains(query) || p.brand.contains(query)).toList();
+    return ListView.separated(
+      padding: EdgeInsets.all(10),
+      itemBuilder: (context,index) => buildPhoneCard(filterResults[index]),
+      separatorBuilder: (context,index) => SizedBox(height: 5,),
+      itemCount: filterResults.length,
+    );
+  }
+
 }
