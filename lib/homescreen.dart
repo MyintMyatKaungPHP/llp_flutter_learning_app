@@ -17,15 +17,17 @@ import 'package:llp_flutter_learning_app/lists/list_tile_demo.dart';
 import 'package:llp_flutter_learning_app/lists/reorderable_listview_demo.dart';
 import 'package:llp_flutter_learning_app/lists/slidable_listtile_demo.dart';
 import 'package:llp_flutter_learning_app/lists/swipe_to_dismiss_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/bottom_navbar_demo.dart';
 import 'package:llp_flutter_learning_app/navigations/bottom_sheet_demo.dart';
 import 'package:llp_flutter_learning_app/navigations/bottom_tabbar_demo.dart';
 import 'package:llp_flutter_learning_app/navigations/dialogs_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/draggable_scrollable_sheet_demo.dart';
 import 'package:llp_flutter_learning_app/navigations/drawer_demo.dart';
+import 'package:llp_flutter_learning_app/navigations/page_selector_demo.dart';
 import 'package:llp_flutter_learning_app/navigations/tabs_demo.dart';
 import 'package:llp_flutter_learning_app/previewscreen.dart';
 import 'package:llp_flutter_learning_app/widgets/button_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/dropdown_demo.dart';
-import 'package:llp_flutter_learning_app/widgets/global_key_example.dart';
 import 'package:llp_flutter_learning_app/widgets/icon_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/image_demo.dart';
 import 'package:llp_flutter_learning_app/widgets/key_example.dart';
@@ -82,7 +84,6 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('Dropdown & Menu', DropdownDemo(), 'widgets/dropdown_demo.dart'),
       buildSubtitle('Other Stateful Widgets', OtherStatefulWidgets(), 'widgets/other_stateful_widgets_demo.dart'),
       buildSubtitle('Flutter Keys', KeyExample(), 'widgets/key_example.dart'),
-      buildSubtitle('Flutter Global Keys', GlobalKeyExample(), 'widgets/global_key_example.dart'),
     ];
 
     final List<Widget> layouts = [
@@ -119,9 +120,9 @@ class HomeScreen extends StatelessWidget {
       buildSubtitle('Drawers', DrawerDemo(), 'navigations/drawer_demo.dart'),
       buildSubtitle('BottomSheet', BottomSheetDemo(), 'navigations/drawer_demo.dart'),
       buildSubtitle('BottomTabBar', BottomTabbarDemo(), 'navigations/bottom_tabbar_demo.dart'),
-      buildSubtitle('BottomNavBar', Placeholder(), ''),
-      buildSubtitle('Page Selector', Placeholder(), ''),
-      buildSubtitle('DraggableScrollableSheet', Placeholder(), ''),
+      buildSubtitle('BottomNavBar', BottomNavbarDemo(), 'navigations/bottom_navbar_demo.dart'),
+      buildSubtitle('Page Selector', PageSelectorDemo(), 'navigations/page_selector_demo.dart'),
+      buildSubtitle('DraggableScrollableSheet', DraggableScrollableSheetDemo(), 'navigations/draggable_scrollable_sheet_demo.dart'),
     ];
 
     final List<Widget> async = [
