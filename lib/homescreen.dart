@@ -5,6 +5,8 @@ import 'package:llp_flutter_learning_app/appbars/convex_bottom_bar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/hidable_bottom_appbar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/searchbar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/sliver_appbar_demo.dart';
+import 'package:llp_flutter_learning_app/async/future_builder_demo.dart';
+import 'package:llp_flutter_learning_app/async/provider_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/expanded_demo.dart';
 import 'package:llp_flutter_learning_app/lists/datatable_demo.dart';
@@ -126,7 +128,8 @@ class HomeScreen extends StatelessWidget {
     ];
 
     final List<Widget> async = [
-      buildSubtitle('FutureBuilder', Placeholder(), ''),
+      buildSubtitle('FutureBuilder', FutureBuilderDemo(), 'async/future_builder_demo.dart'),
+      buildSubtitle('Provider', ProviderDemo(), 'async/provider_demo.dart'),
       buildSubtitle('StreamBuilder', Placeholder(), ''),
     ];
 

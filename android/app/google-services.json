@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "524725915609",
+    "project_id": "llp-firebase-test",
+    "storage_bucket": "llp-firebase-test.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:524725915609:android:cba197fad65c815bb593c8",
+        "android_client_info": {
+          "package_name": "com.adtivemm"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2zwhgh_YSZ5MLSa2IA4GcaQ2XEwdhpA4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
