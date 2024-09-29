@@ -1,4 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:llp_flutter_learning_app/animations/animated_container_demo.dart';
+import 'package:llp_flutter_learning_app/animations/animated_icons_demo.dart';
+import 'package:llp_flutter_learning_app/animations/animations_package_demo.dart';
+import 'package:llp_flutter_learning_app/animations/hero_demo.dart';
+import 'package:llp_flutter_learning_app/animations/opacity_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/backdrop_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/bottom_appbar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/convex_bottom_bar_demo.dart';
@@ -7,6 +12,7 @@ import 'package:llp_flutter_learning_app/appbars/searchbar_demo.dart';
 import 'package:llp_flutter_learning_app/appbars/sliver_appbar_demo.dart';
 import 'package:llp_flutter_learning_app/async/future_builder_demo.dart';
 import 'package:llp_flutter_learning_app/async/provider_demo.dart';
+import 'package:llp_flutter_learning_app/async/stream_builder_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/container_demo.dart';
 import 'package:llp_flutter_learning_app/layouts/expanded_demo.dart';
 import 'package:llp_flutter_learning_app/lists/datatable_demo.dart';
@@ -130,14 +136,15 @@ class HomeScreen extends StatelessWidget {
     final List<Widget> async = [
       buildSubtitle('FutureBuilder', FutureBuilderDemo(), 'async/future_builder_demo.dart'),
       buildSubtitle('Provider', ProviderDemo(), 'async/provider_demo.dart'),
-      buildSubtitle('StreamBuilder', Placeholder(), ''),
+      buildSubtitle('StreamBuilder', StreamBuilderDemo(), 'async/stream_builder_demo.dart'),
     ];
 
     final List<Widget> animations = [
-      buildSubtitle('Hero', Placeholder(), ''),
-      buildSubtitle('Opacity', Placeholder(), ''),
-      buildSubtitle('AnimatedContainer', Placeholder(), ''),
-      buildSubtitle('AnimationPackage', Placeholder(), ''),
+      buildSubtitle('Hero', HeroDemo(), 'animations/hero_demo.dart'),
+      buildSubtitle('Opacity', OpacityDemo(), 'animations/opacity_demo.dart'),
+      buildSubtitle('AnimatedIconItem', AnimatedIconsDemo(), 'animations/animated_icons_demo.dart'),
+      buildSubtitle('AnimatedContainer', AnimatedContainerDemo(), 'animations/animated_container_demo.dart'),
+      buildSubtitle('AnimationPackage', AnimationsPackageDemo(), 'animations/animations_package_demo.dart'),
     ];
 
     return Scaffold(

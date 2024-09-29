@@ -1,5 +1,5 @@
 class Expense {
-  final String id;
+  String id;
   final String name;
   final int amount;
   final String date;
