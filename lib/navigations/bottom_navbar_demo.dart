@@ -41,8 +41,6 @@ class _BottomNavbarDemoState extends State<BottomNavbarDemo> {
       }),
     );
 
-
-
     return Scaffold(
       body: screens[currentIndex],
       bottomNavigationBar: bottomNavBar,
